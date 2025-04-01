@@ -14,7 +14,10 @@ const promiseOne = new Promise((resolve, reject) => {
   });
 });
 const promiseTwo = new Promise((resolve, reject) => {
-  document.addEventListener('mousedown', function () {
+  document.addEventListener('click', function () {
+    resolve(showHandler('success', 'Second promise was resolved'));
+  });
+  document.addEventListener('contextmenu', function () {
     resolve(showHandler('success', 'Second promise was resolved'));
   });
 });
